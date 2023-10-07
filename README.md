@@ -11,4 +11,6 @@ Usando a API
 Você pode usar a API para verificar se duas palavras são anagramas. Acesse o endpoint /verificar-anagrama via HTTP GET e forneça duas palavras como parâmetros de consulta.
 
 Testando a API
-O projeto inclui testes unitários para verificar a lógica de verificação de anagramas. Você pode executar os testes usando o Maven.
+O projeto inclui testes unitários para verificar a lógica de verificação de anagramas. Você pode executar os testes usando o Maven ou o POSTMAN passando os parâmetros corretamente, ele retornará TRUE caso seja um anagrama e FALSE caso não seja.
+
+Feito isto, Teste concluído!!
