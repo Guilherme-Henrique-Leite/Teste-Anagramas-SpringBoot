@@ -1,0 +1,6 @@
+package br.com.springboot.chamada_teste_java.requests;
+
+@RestController
+public class AnagramaController {
+
+}

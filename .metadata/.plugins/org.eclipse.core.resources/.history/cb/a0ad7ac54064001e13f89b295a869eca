@@ -1,0 +1,27 @@
+package br.com.springboot.chamada_teste_java.controllers;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@SpringBootTest
+@AutoConfigureMockMvc
+public class TesteAnagrama {
+
+    @Autowired
+    private AnagramaController controller;
+
+    @Test
+    public void testeAnagramas() {
+        // Casos de sucesso (anagramas)
+        Assert.assertTrue(controller.saoAnagramas("Amor", "Roma"));
+        Assert.assertTrue(controller.saoAnagramas("Pedra", "Padre"));
+
+        // Casos de falha (não anagramas)
+        Assert.assertFalse(controller.saoAnagramas("Gato", "Cachorro"));
+        Assert.assertFalse(controller.saoAnagramas("Sol", "Lua"));
+    }
+}

@@ -1,0 +1,21 @@
+package br.com.springboot.chamada_teste_java.controllers;
+import org.junit.Assert;
+import org.junit.Test;
+
+
+
+public class TesteAnagrama {
+
+    @Test
+    public void testeAnagramas() {
+        AnagramaController controller = new AnagramaController();
+
+        // Casos de sucesso (anagramas)
+        Assert.assertTrue(controller.saoAnagramas("Amor", "Roma"));
+        Assert.assertTrue(controller.saoAnagramas("Pedra", "Padre"));
+
+        // Casos de falha (não anagramas)
+        Assert.assertFalse(controller.saoAnagramas("hello", "world"));
+        Assert.assertFalse(controller.saoAnagramas("apple", "orange"));
+    }
+}

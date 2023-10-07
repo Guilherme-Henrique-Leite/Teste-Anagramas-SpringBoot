@@ -1,0 +1,20 @@
+package br.com.springboot.chamada_teste_java.requests;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api") // Especifique o caminho base do controlador
+public class AnagramaController {
+
+    @GetMapping("/verificar-anagrama")
+    public boolean verificarAnagrama(@RequestParam String palavra1, @RequestParam String palavra2) {
+        return saoAnagramas(palavra1, palavra2);
+    }
+
+    private boolean saoAnagramas(String palavra1, String palavra2) {
+        // Implemente a lógica para verificar se as palavras são anagramas
+        // Retorne true se forem anagramas, false caso contrário
+    }
+}
+

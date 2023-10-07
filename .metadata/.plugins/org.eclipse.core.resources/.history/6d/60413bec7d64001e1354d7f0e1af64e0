@@ -1,0 +1,52 @@
+package br.com.springboot.chamada_teste_java.controllers;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * A sample greetings controller to return greeting text
+ */
+@RestController
+public class GreetingsController {
+    /**
+     * @param name the name to greet
+     * @return greeting text
+     */
+    @RequestMapping(value = "/{name}", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public String greetingText(@PathVariable String name) {
+        return "Hello " + name + "!";
+    }
+
+    /**
+     * @param palavra1 a primeira palavra
+     * @param palavra2 a segunda palavra
+     * @return true se as palavras são anagramas, false caso contrário
+     */
+    @RequestMapping(value = "/verificar-anagrama", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public boolean verificarAnagrama(@PathVariable String palavra1, @PathVariable String palavra2) {
+        // Implemente a lógica para verificar se as palavras são anagramas aqui
+        // Retorne true se forem anagramas, false caso contrário
+        palavra1 = palavra1.replaceAll("\\s", "").toLowerCase();
+        palavra2 = palavra2.replaceAll("\\s", "").toLowerCase();
+
+        // Verifique se as palavras têm o mesmo comprimento.
+        if (palavra1.length() != palavra2.length()) {
+            return false;
+        }
+
+        // Ordenar as letras das palavras.
+        char[] chars1 = palavra1.toCharArray();
+        char[] chars2 = palavra2.toCharArray();
+        java.util.Arrays.sort(chars1);
+        java.util.Arrays.sort(chars2);
+
+        // Comparar as letras ordenadas.
+        return java.util.Arrays.equals(chars1, chars2);
+    }
+}

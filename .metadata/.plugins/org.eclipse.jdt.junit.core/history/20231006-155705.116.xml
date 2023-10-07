@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TesteAnagrama" project="chamada-teste-java" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="br.com.springboot.chamada_teste_java.controllers.TesteAnagrama" time="0.013">
+    <testcase name="testeAnagramaFalha1" classname="br.com.springboot.chamada_teste_java.controllers.TesteAnagrama" time="0.001"/>
+    <testcase name="testeAnagramaFalha2" classname="br.com.springboot.chamada_teste_java.controllers.TesteAnagrama" time="0.003"/>
+    <testcase name="testeAnagramaSucesso1" classname="br.com.springboot.chamada_teste_java.controllers.TesteAnagrama" time="0.004"/>
+    <testcase name="testeAnagramaSucesso2" classname="br.com.springboot.chamada_teste_java.controllers.TesteAnagrama" time="0.003"/>
+  </testsuite>
+</testrun>
